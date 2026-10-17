@@ -4,10 +4,11 @@
 Me contrataron para construir un sistema de base de datos para la biblioteca de mi escuela técnica, la biblioteca consta de una x cantidad de libros ordenados por tema y autor, también se realizan las búsquedas por editorial, la biblioteca quiere que la base de datos muestre como resultado los libros que están deteriorados, no devueltos y no encontrados, también quiere saber que socios están debiendo cuotas societarias y libros prestados, por último, la biblioteca quiere saber cuantos libros tiene en su totalidad tanto en el catálogo como los libros que se encuentran prestados.
 
 ---
-1. Diagrama Entidad-Relación (DER)
+### 1. Diagrama Entidad-Relación (DER)
 ![Alt](https://github.com/mvvillanueva1706-lgtm/Practico-N3/blob/main/Biblioteca.drawio.png)
 
-2. Normalización de la Tabla
+---
+### 2. Normalización de la Tabla
 
 1. Primera Forma Normal (1FN): Se eliminan los datos que no son atomicos. Cada columna contiene un solo valor y existe una clave primaria definida para cada registro.
 
@@ -15,10 +16,10 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
 
 3. Tercera Forma Normal (3FN): Se eliminan las dependencias transitivas. Los temas, editoriales y autores se extraen a sus propias tablas independientes (`Tema`, `Editorial`, `Autor`) evitando redundancia al repetirse en varios libros. 
 
+---
+### 3. Insertar datos en las tablas
 
-
-## 3. Inserción de Datos en Tablas
-
+  <!-- Tabla Tema) -->
 <table>
   <tr>
     <th colspan="3" align="center">Tema</th>
@@ -41,21 +42,33 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
   </tr>
 </table>
 
+  <!-- Tabla Editorial -->
+<table>
+  <tr>
+    <th colspan="3" align="center">Editorial</th>
+  </tr>
+  <tr>
+    <td><b>id_editorial</b></td>
+    <td><b>nombreEditorial</b></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Alfaomega</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Pearson</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>McGraw-Hill</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Marcombo</td>
+  </tr>
+</table>
 
-|  | Tema |
-| --- | --- |
-| id_tema | nombreTema |
-| 1 | Programación e Informática |
-| 2 | Electrónica y Circuitos |
-| 3 | Mecánica Técnica |
-
-### Tabla: Editorial
-
-| **id_editorial** | **nombreEditorial** | 
-| 1 | Alfaomega | 
-| 2 | Pearson Educación | 
-| 3 | McGraw-Hill | 
-| 4 | Marcombo | 
 
 ### Tabla: Autor
 
