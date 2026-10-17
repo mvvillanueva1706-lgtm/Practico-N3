@@ -19,7 +19,6 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
 ---
 ### 3. Insertar datos en las tablas
 
-  <!-- Tabla Tema) -->
 ```sql
 INSERT INTO Socio (id_socio, nombreSocio, Cuota) VALUES 
 (1, 'Juan Pérez', 'Al día'),
@@ -33,154 +32,31 @@ INSERT INTO Socio (id_socio, nombreSocio, Cuota) VALUES
 (9, 'Gabriel Romero', 'Debiendo'),
 (10, 'Valentina Silva', 'Al día');
 ```
+
+```sql
+INSERT INTO Libro (id_libro, Titulo, estadoLibro, id_tema, id_editorial) VALUES 
+(1, 'Clean Code: Manual de desarrollo ágil de software', 'Disponible', 1, 1),
+(2, 'Teoría de Circuitos y Dispositivos Electrónicos', 'Deteriorado', 2, 2),
+(3, 'Diseño en Ingeniería Mecánica de Shigley', 'Deteriorado', 3, 3),
+(4, 'Sistemas Operativos Modernos', 'Deteriorado', 1, 2),
+(5, 'Principios de Electrónica', 'No encontrado', 2, 3),
+(6, 'Redes de Computadoras', 'No encontrado', 1, 2),
+(7, 'El Programador Pragmático', 'Disponible', 1, 1),
+(8, 'Dispositivos Semiconductores: Principios y Modelos', 'Disponible', 2, 1),
+(9, 'Principios de Electricidad y Electrónica', 'Disponible', 2, 4),
+(10, 'Manual de Mecánica Industrial', 'Disponible', 3, 4);
+```
   
-<table>
-  <tr>
-    <th colspan="3" align="center">Tema</th>
-  </tr>
-  <tr>
-    <td><b>id_tema</b></td>
-    <td><b>nombreTema</b></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Programación e Informática</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Electrónica y Circuitos</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Mecánica Técnica</td>
-  </tr>
-</table>
+```sql
+INSERT INTO Prestamo (id_prestamo, estadoPrestamo, id_socio) VALUES 
+(1, 'No devuelto', 2),
+(2, 'Devuelto', 1),
+(3, 'No devuelto', 4),
+(4, 'Devuelto', 3),
+(5, 'No devuelto', 6);
+```
 
-  <!-- Tabla Editorial -->
-<table>
-  <tr>
-    <th colspan="3" align="center">Editorial</th>
-  </tr>
-  <tr>
-    <td><b>id_editorial</b></td>
-    <td><b>nombreEditorial</b></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Alfaomega</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Pearson</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>McGraw-Hill</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Marcombo</td>
-  </tr>
-</table>
-
-  <!-- Tabla Autor -->
-<table>
-  <tr>
-    <th colspan="3" align="center">Editorial</th>
-  </tr>
-  <tr>
-    <td><b>id_autor</b></td>
-    <td><b>nombreAutor</b></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Robert C. Martin</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Robert L. Boylestad</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Albert P. Malvino</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Andrew S. Tanenbaum</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Shigley / Budynas</td>
-  </tr>
-</table>
-
-  <!-- Tabla Libro -->
-
-  
 ---
-
-
-
-### Tabla: Libro
-
-| **id_libro** | **Titulo** | **estadoLibro** | **id_tema** | **id_editorial** | 
-| 1 | Clean Code: Manual de desarrollo ágil de software | Disponible | 1 | 1 | 
-| 2 | Teoría de Circuitos y Dispositivos Electrónicos | Deteriorado | 2 | 2 | 
-| 3 | Diseño en Ingeniería Mecánica de Shigley | Deteriorado | 3 | 3 | 
-| 4 | Sistemas Operativos Modernos | Deteriorado | 1 | 2 | 
-| 5 | Principios de Electrónica | No encontrado | 2 | 3 | 
-| 6 | Redes de Computadoras | No encontrado | 1 | 2 | 
-| 7 | El Programador Pragmático | Disponible | 1 | 1 | 
-| 8 | Dispositivos Semiconductores: Principios y Modelos | Disponible | 2 | 1 | 
-| 9 | Principios de Electricidad y Electrónica | Disponible | 2 | 4 | 
-| 10 | Manual de Mecánica Industrial | Disponible | 3 | 4 | 
-
-### Tabla: libroAutor
-
-| **id_libro** | **id_autor** | 
-| 1 | 1 | 
-| 2 | 2 | 
-| 3 | 5 | 
-| 4 | 4 | 
-| 5 | 3 | 
-| 6 | 4 | 
-| 7 | 1 | 
-| 8 | 2 | 
-| 9 | 3 | 
-| 10 | 5 | 
-
-### Tabla: Socio
-
-| **id_socio** | **nombreSocio** | **Cuota** | 
-| 1 | Juan Pérez | Al día | 
-| 2 | María Gómez | Debiendo | 
-| 3 | Carlos López | Al día | 
-| 4 | Ana Martínez | Debiendo | 
-| 5 | Lucas Rodríguez | Al día | 
-| 6 | Sofía Fernández | Debiendo | 
-| 7 | Diego Torres | Al día | 
-| 8 | Laura Díaz | Al día | 
-| 9 | Gabriel Romero | Debiendo | 
-| 10 | Valentina Silva | Al día | 
-
-### Tabla: Prestamo
-
-| **id_prestamo** | **estadoPrestamo** | **id_socio** | 
-| 1 | No devuelto | 2 | 
-| 2 | Devuelto | 1 | 
-| 3 | No devuelto | 4 | 
-| 4 | Devuelto | 3 | 
-| 5 | No devuelto | 6 | 
-
-### Tabla: detallePrestamo
-
-| **id_detalle** | **id_libro** | **id_prestamo** | 
-| 1 | 1 | 1 | 
-| 2 | 7 | 2 | 
-| 3 | 8 | 3 | 
-| 4 | 9 | 4 | 
-| 5 | 10 | 5 | 
-
 ## 4. Consultas SQL con JOIN
 
 ### a) Libros deteriorados y no encontrados
