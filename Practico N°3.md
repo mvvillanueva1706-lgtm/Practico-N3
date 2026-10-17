@@ -1,7 +1,7 @@
 # Arquitectura de Base de Datos: Práctico N°3
 
 ### A través de este texto, vamos a definir y crear un DER. El texto es el siguiente: 
-### Me contrataron para construir un sistema de base de datos para la biblioteca de mi escuela técnica, la biblioteca consta de una x cantidad de libros ordenados por tema y autor, también se realizan las búsquedas por editorial, la biblioteca quiere que la base de datos muestre como resultado los libros que están deteriorados, no devueltos y no encontrados, también quiere saber que socios están debiendo cuotas societarias y libros prestados, por último, la biblioteca quiere saber cuantos libros tiene en su totalidad tanto en el catálogo como los libros que se encuentran prestados.
+Me contrataron para construir un sistema de base de datos para la biblioteca de mi escuela técnica, la biblioteca consta de una x cantidad de libros ordenados por tema y autor, también se realizan las búsquedas por editorial, la biblioteca quiere que la base de datos muestre como resultado los libros que están deteriorados, no devueltos y no encontrados, también quiere saber que socios están debiendo cuotas societarias y libros prestados, por último, la biblioteca quiere saber cuantos libros tiene en su totalidad tanto en el catálogo como los libros que se encuentran prestados.
 
 ---
 1. Diagrama Entidad-Relación (DER)
@@ -9,24 +9,22 @@
 
 2. Normalización de la Tabla
 
-Para pasar de una planilla plana sin normalizar (0FN) a la **Tercera Forma Normal (3FN)**:
+1. Primera Forma Normal (1FN): Se eliminan los datos que no son atomicos. Cada columna contiene un solo valor y existe una clave primaria definida para cada registro.
 
-1. **Primera Forma Normal (1FN):** Se eliminan grupos repetidos y celdas con múltiples valores. Cada columna contiene valores atómicos y cada registro posee una clave primaria única.
+2. Segunda Forma Normal (2FN): Se eliminan las dependencias parciales. Todos los atributos que no son clave dependen totalmente de la clave primaria completa, por eso las relaciones N:M se dividen en las tablas `autorLibro` y `detallePrestamo`.
 
-2. **Segunda Forma Normal (2FN):** Se eliminan dependencias parciales. Todos los atributos no clave dependen totalmente de la clave primaria completa. Las relaciones N:M se descomponen en tablas intermedias (`libroAutor` y `detallePrestamo`).
+3. Tercera Forma Normal (3FN): Se eliminan las dependencias transitivas. Los temas, editoriales y autores se extraen a sus propias tablas independientes (`Tema`, `Editorial`, `Autor`) evitando redundancia al repetirse en varios libros. 
 
-3. **Tercera Forma Normal (3FN):** Se eliminan dependencias transitivas. Los temas, editoriales y autores se extraen a tablas independientes (`Tema`, `Editorial`, `Autor`) para evitar redundancias de datos.
+
 
 ## 3. Inserción de Datos en Tablas
 
-### Tabla: Tema
-
-| 
-
-| **id_tema** | **nombreTema** | 
-| 1 | Programación e Informática | 
-| 2 | Electrónica y Circuitos | 
-| 3 | Mecánica Técnica | 
+|  | Tema |
+| --- | --- |
+| id_tema | nombreTema |
+| 1 | Programación e Informática |
+| 2 | Electrónica y Circuitos |
+| 3 | Mecánica Técnica |
 
 ### Tabla: Editorial
 
