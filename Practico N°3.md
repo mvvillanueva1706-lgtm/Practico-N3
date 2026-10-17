@@ -31,9 +31,7 @@ INSERT INTO Socio (id_socio, nombreSocio, Cuota) VALUES
 (8, 'Laura Díaz', 'Al día'),
 (9, 'Gabriel Romero', 'Debiendo'),
 (10, 'Valentina Silva', 'Al día');
-```
 
-```sql
 INSERT INTO Libro (id_libro, Titulo, estadoLibro) VALUES 
 (1, 'Clean Code: Manual de desarrollo ágil de software', 'Disponible'),
 (2, 'Teoría de Circuitos y Dispositivos Electrónicos', 'Deteriorado'),
@@ -45,9 +43,7 @@ INSERT INTO Libro (id_libro, Titulo, estadoLibro) VALUES
 (8, 'Dispositivos Semiconductores: Principios y Modelos', 'Disponible'),
 (9, 'Principios de Electricidad y Electrónica', 'Disponible'),
 (10, 'Manual de Mecánica Industrial', 'Disponible');
-```
-  
-```sql
+
 INSERT INTO Prestamo (id_prestamo, estadoPrestamo, id_socio) VALUES 
 (1, 'No devuelto', 2),
 (2, 'Devuelto', 1),
@@ -57,46 +53,29 @@ INSERT INTO Prestamo (id_prestamo, estadoPrestamo, id_socio) VALUES
 ```
 
 ---
-## 4. Consultas SQL con JOIN
+### 4. Consultas SQL con JOIN
 
-### a) Libros deteriorados y no encontrados
+1. Libros deteriorados y no encontrados
 
-```
-SELECT id_libro, Titulo, estadoLibro 
-FROM Libro 
+```sql
+SELECT id_libro, Titulo, estadoLibro FROM Libro 
 WHERE estadoLibro IN ('Deteriorado', 'No encontrado');
-
 ```
 
-### b) Libros prestados que no han sido devueltos
+2. Libros prestados que no han sido devueltos
 
-```
-SELECT L.id_libro, L.Titulo, P.id_prestamo, S.nombreSocio, P.estadoPrestamo
-FROM Libro L
-JOIN detallePrestamo DP ON L.id_libro = DP.id_libro
-JOIN Prestamo P ON DP.id_prestamo = P.id_prestamo
-JOIN Socio S ON P.id_socio = S.id_socio
-WHERE P.estadoPrestamo = 'No devuelto';
-
+```sql
+SELECT Libro.id_libro, Libro.Titulo, Prestamo.id_prestamo, Socio.nombreSocio, Prestamo.estadoPrestamo FROM Libro
+INNER JOIN detallePrestamo ON Libro.id_libro = detallePrestamo.id_libro
+INNER JOIN Prestamo ON detallePrestamo.id_prestamo = Prestamo.id_prestamo
+INNER JOIN Socio ON Prestamo.id_socio = Socio.id_socio
+WHERE Prestamo.estadoPrestamo = 'No devuelto';
 ```
 
-### c) Socios que deben cuotas societarias o libros prestados
+3. Socios que deben cuotas societarias o libros prestados
 
-```
-SELECT DISTINCT S.id_socio, S.nombreSocio, S.Cuota, P.estadoPrestamo
-FROM Socio S
-LEFT JOIN Prestamo P ON S.id_socio = P.id_socio
-WHERE S.Cuota = 'Debiendo' OR P.estadoPrestamo = 'No devuelto';
-
-```
-
-### d) Cantidad total de libros en catálogo y prestados
-
-```
-SELECT 
-    (SELECT COUNT(*) FROM Libro) AS total_catalogo,
-    (SELECT COUNT(DISTINCT id_libro) FROM detallePrestamo DP 
-     JOIN Prestamo P ON DP.id_prestamo = P.id_prestamo 
-     WHERE P.estadoPrestamo = 'No devuelto') AS total_prestados;
-
+```sql
+SELECT Socio.id_socio, Socio.nombreSocio, Socio.Cuota, Prestamo.estadoPrestamo FROM Socio
+LEFT JOIN Prestamo ON Socio.id_socio = Prestamo.id_socio
+WHERE Socio.Cuota = 'Debiendo' OR Prestamo.estadoPrestamo = 'No devuelto';
 ```
