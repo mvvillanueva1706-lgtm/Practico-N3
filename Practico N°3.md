@@ -1,9 +1,13 @@
-# Práctico N°3: Sistema de Base de Datos para Biblioteca
+# Arquitectura de Base de Datos: Práctico N°3
 
-## 1. Diagrama Entidad-Relación (DER)
+## A través de este texto, vamos a definir y crear un DER. El texto es el siguiente: 
+Me contrataron para construir un sistema de base de datos para la biblioteca de mi escuela técnica, la biblioteca consta de una x cantidad de libros ordenados por tema y autor, también se realizan las búsquedas por editorial, la biblioteca quiere que la base de datos muestre como resultado los libros que están deteriorados, no devueltos y no encontrados, también quiere saber que socios están debiendo cuotas societarias y libros prestados, por último, la biblioteca quiere saber cuantos libros tiene en su totalidad tanto en el catálogo como los libros que se encuentran prestados.
+
+---
+1. Diagrama Entidad-Relación (DER)
 ![Alt](https://github.com/mvvillanueva1706-lgtm/Practico-N3/blob/main/Biblioteca.drawio.png)
 
-## 2. Normalización de la Tabla
+2. Normalización de la Tabla
 
 Para pasar de una planilla plana sin normalizar (0FN) a la **Tercera Forma Normal (3FN)**:
 
