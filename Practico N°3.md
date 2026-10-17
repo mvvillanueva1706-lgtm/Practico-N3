@@ -19,6 +19,31 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
 
 ## 3. Inserción de Datos en Tablas
 
+<table>
+  <!-- Fila del título principal (une las 3 columnas) -->
+  <tr>
+    <th colspan="3" align="center">Este es el título principal de la tabla</th>
+  </tr>
+  <!-- Subencabezados de las columnas -->
+  <tr>
+    <td><b>Columna 1</b></td>
+    <td><b>Columna 2</b></td>
+    <td><b>Columna 3</b></td>
+  </tr>
+  <!-- Filas de datos -->
+  <tr>
+    <td>Dato A</td>
+    <td>Dato B</td>
+    <td>Dato C</td>
+  </tr>
+  <tr>
+    <td>Dato D</td>
+    <td>Dato E</td>
+    <td>Dato F</td>
+  </tr>
+</table>
+
+
 |  | Tema |
 | --- | --- |
 | id_tema | nombreTema |
