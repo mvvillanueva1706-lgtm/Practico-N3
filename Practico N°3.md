@@ -30,10 +30,12 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
   <tr>
     <td>Dato A</td>
     <td>Dato B</td>
+    <td>Dato B</td>
   </tr>
   <tr>
     <td>Dato D</td>
     <td>Dato E</td>
+    <td>Dato B</td>
   </tr>
 </table>
 
