@@ -24,18 +24,16 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
     <th colspan="3" align="center">Tema</th>
   </tr>
   <tr>
-    <td><b>Columna 1</b></td>
-    <td><b>Columna 2</b></td>
+    <td><b>**id_tema**</b></td>
+    <td><b>**nombreTema**</b></td>
   </tr>
   <tr>
-    <td>Dato A</td>
-    <td>Dato B</td>
-    <td>Dato B</td>
+    <td>1</td>
+    <td>Programación e Informática</td>
   </tr>
   <tr>
-    <td>Dato D</td>
-    <td>Dato E</td>
-    <td>Dato B</td>
+    <td>2</td>
+    <td>Electrónica y Circuitos</td>
   </tr>
 </table>
 
