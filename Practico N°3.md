@@ -24,8 +24,8 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
     <th colspan="3" align="center">Tema</th>
   </tr>
   <tr>
-    <td><b>**id_tema**</b></td>
-    <td><b>**nombreTema**</b></td>
+    <td><b>id_tema</b></td>
+    <td><b>nombreTema</b></td>
   </tr>
   <tr>
     <td>1</td>
@@ -34,6 +34,10 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
   <tr>
     <td>2</td>
     <td>Electrónica y Circuitos</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Mecánica Técnica</td>
   </tr>
 </table>
 
