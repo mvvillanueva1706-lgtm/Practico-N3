@@ -69,15 +69,41 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
   </tr>
 </table>
 
+  <!-- Tabla Autor -->
+<table>
+  <tr>
+    <th colspan="3" align="center">Editorial</th>
+  </tr>
+  <tr>
+    <td><b>id_autor</b></td>
+    <td><b>nombreAutor</b></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Robert C. Martin</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Robert L. Boylestad</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Albert P. Malvino</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Andrew S. Tanenbaum</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Shigley / Budynas</td>
+  </tr>
+</table>
+
+  
 ---
 ### Tabla: Autor
 
-| **id_autor** | **nombreAutor** | 
-| 1 | Robert C. Martin | 
-| 2 | Robert L. Boylestad | 
-| 3 | Albert P. Malvino | 
-| 4 | Andrew S. Tanenbaum | 
-| 5 | Shigley / Budynas | 
 
 ### Tabla: Libro
 
