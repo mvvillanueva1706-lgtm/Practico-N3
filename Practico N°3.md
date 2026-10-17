@@ -20,6 +20,8 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
 ### 3. Insertar datos en las tablas
 
   <!-- Tabla Tema) -->
+`INSERT INTO Tema (id_tema, nombreTema) VALUES (1, 'Programación e Informática'), (2, 'Electrónica y Circuitos'), (3, 'Mecánica Técnica');`
+  
 <table>
   <tr>
     <th colspan="3" align="center">Tema</th>
@@ -100,9 +102,11 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
   </tr>
 </table>
 
+  <!-- Tabla Libro -->
+
   
 ---
-### Tabla: Autor
+
 
 
 ### Tabla: Libro
