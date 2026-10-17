@@ -69,20 +69,7 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
   </tr>
 </table>
 
-<!-- TABLA 1 -->
-<table style="display: inline-table; margin-right: 20px;">
-  <tr><th colspan="2" align="center">Tabla Uno</th></tr>
-  <tr><td>Columna 1</td><td>Columna 2</td></tr>
-  <tr><td>Dato A</td><td>Dato B</td></tr>
-</table>
-
-<!-- TABLA 2 -->
-<table style="display: inline-table;">
-  <tr><th colspan="2" align="center">Tabla Dos</th></tr>
-  <tr><td>Columna 3</td><td>Columna 4</td></tr>
-  <tr><td>Dato C</td><td>Dato D</td></tr>
-</table>
-
+---
 ### Tabla: Autor
 
 | **id_autor** | **nombreAutor** | 
