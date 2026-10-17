@@ -20,7 +20,19 @@ Me contrataron para construir un sistema de base de datos para la biblioteca de 
 ### 3. Insertar datos en las tablas
 
   <!-- Tabla Tema) -->
-`INSERT INTO Tema (id_tema, nombreTema) VALUES (1, 'Programación e Informática'), (2, 'Electrónica y Circuitos'), (3, 'Mecánica Técnica');`
+```sql
+INSERT INTO Socio (id_socio, nombreSocio, Cuota) VALUES 
+(1, 'Juan Pérez', 'Al día'),
+(2, 'María Gómez', 'Debiendo'),
+(3, 'Carlos López', 'Al día'),
+(4, 'Ana Martínez', 'Debiendo'),
+(5, 'Lucas Rodríguez', 'Al día'),
+(6, 'Sofía Fernández', 'Debiendo'),
+(7, 'Diego Torres', 'Al día'),
+(8, 'Laura Díaz', 'Al día'),
+(9, 'Gabriel Romero', 'Debiendo'),
+(10, 'Valentina Silva', 'Al día');
+```
   
 <table>
   <tr>
