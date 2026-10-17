@@ -34,17 +34,17 @@ INSERT INTO Socio (id_socio, nombreSocio, Cuota) VALUES
 ```
 
 ```sql
-INSERT INTO Libro (id_libro, Titulo, estadoLibro, id_tema, id_editorial) VALUES 
-(1, 'Clean Code: Manual de desarrollo ágil de software', 'Disponible', 1, 1),
-(2, 'Teoría de Circuitos y Dispositivos Electrónicos', 'Deteriorado', 2, 2),
-(3, 'Diseño en Ingeniería Mecánica de Shigley', 'Deteriorado', 3, 3),
-(4, 'Sistemas Operativos Modernos', 'Deteriorado', 1, 2),
-(5, 'Principios de Electrónica', 'No encontrado', 2, 3),
-(6, 'Redes de Computadoras', 'No encontrado', 1, 2),
-(7, 'El Programador Pragmático', 'Disponible', 1, 1),
-(8, 'Dispositivos Semiconductores: Principios y Modelos', 'Disponible', 2, 1),
-(9, 'Principios de Electricidad y Electrónica', 'Disponible', 2, 4),
-(10, 'Manual de Mecánica Industrial', 'Disponible', 3, 4);
+INSERT INTO Libro (id_libro, Titulo, estadoLibro) VALUES 
+(1, 'Clean Code: Manual de desarrollo ágil de software', 'Disponible'),
+(2, 'Teoría de Circuitos y Dispositivos Electrónicos', 'Deteriorado'),
+(3, 'Diseño en Ingeniería Mecánica de Shigley', 'Deteriorado'),
+(4, 'Sistemas Operativos Modernos', 'Deteriorado'),
+(5, 'Principios de Electrónica', 'No encontrado'),
+(6, 'Redes de Computadoras', 'No encontrado'),
+(7, 'El Programador Pragmático', 'Disponible'),
+(8, 'Dispositivos Semiconductores: Principios y Modelos', 'Disponible'),
+(9, 'Principios de Electricidad y Electrónica', 'Disponible'),
+(10, 'Manual de Mecánica Industrial', 'Disponible');
 ```
   
 ```sql
