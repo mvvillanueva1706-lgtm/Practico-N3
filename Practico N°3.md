@@ -29,7 +29,7 @@ INSERT INTO Socio (id_socio, nombreSocio, Cuota) VALUES
 (6, 'Sofía Fernández', 'Debiendo'),
 (7, 'Diego Torres', 'Al día'),
 (8, 'Laura Díaz', 'Al día'),
-(9, 'Gabriel Romero', 'Debiendo'),
+(9, 'Gabriel Romero', 'Al día'),
 (10, 'Valentina Silva', 'Al día');
 
 INSERT INTO Libro (id_libro, Titulo, estadoLibro) VALUES 
@@ -49,8 +49,7 @@ INSERT INTO Prestamo (id_prestamo, estadoPrestamo, id_socio) VALUES
 (2, 'Devuelto', 1),
 (3, 'No devuelto', 4),
 (4, 'Devuelto', 3),
-(5, 'No devuelto', 6)
-(5, 'No devuelto', 9);
+(5, 'No devuelto', 6);
 ```
 
 ---
