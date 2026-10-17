@@ -1,7 +1,7 @@
 # Práctico N°3: Sistema de Base de Datos para Biblioteca
 
 ## 1. Diagrama Entidad-Relación (DER)
-
+![Alt](https://github.com/mvvillanueva1706-lgtm/Practico-N3/blob/main/Biblioteca.drawio.png)
 
 ## 2. Normalización de la Tabla
 
