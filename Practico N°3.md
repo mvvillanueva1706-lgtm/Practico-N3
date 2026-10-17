@@ -49,7 +49,8 @@ INSERT INTO Prestamo (id_prestamo, estadoPrestamo, id_socio) VALUES
 (2, 'Devuelto', 1),
 (3, 'No devuelto', 4),
 (4, 'Devuelto', 3),
-(5, 'No devuelto', 6);
+(5, 'No devuelto', 6)
+(5, 'No devuelto', 9);
 ```
 
 ---
